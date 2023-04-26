@@ -4,7 +4,7 @@ Regex, short for regular expression, is a sequence of characters that defines a 
 
 ## Summary
 
-In this tutorial I will break down the following regex for matching an email /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ into its basic components. This regex would be useful for validating email input in various applications.
+In this tutorial I will break down the following regex for matching an email `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/` into its basic components. This regex would be useful for validating email input in various applications.
 
 ## Table of Contents
 
@@ -107,6 +107,8 @@ There are also two types of look-behinds, which work in a similar way to look-ah
 A negative look-behind assertion is specified using the syntax "(?<!pattern)", which matches only if "pattern" does not match the text immediately preceding the current position.
 
 Positive Look-behind Checks if a pattern exists behind the current position, without including it in the match result. If the pattern exists, the match continues from the current position. For example, the pattern /(?<=\w)\d/ would match any digit that is immediately preceded by a word character.
+
+For the example I'm researching, `/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/`, the look-ahead in this expression is the `(?=\.([a-z.]{2,6})$)` part, which is used to ensure that the email address ends with a valid top-level domain. It looks ahead of the current position to check if the next characters match the specified pattern. In this case, it matches a dot followed by 2 to 6 lowercase alphabets or dots until the end of the string. If the look-ahead fails, the entire match fails.
 
 ## Author
 
