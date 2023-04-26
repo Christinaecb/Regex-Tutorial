@@ -80,6 +80,18 @@ Using regex boundaries in your regular expressions can help you create more spec
 
 ### Back-references
 
+In regular expressions, a back-reference is a way to reference a previously captured group in the same regex. It is created by capturing a group of characters using parentheses, and then referencing that group later in the regex using a special syntax. Back-references are useful for matching repeating patterns or patterns with symmetry.
+
+For example, consider the following regex pattern: /(ab)+\1/. This pattern matches a string that contains one or more occurrences of the characters "ab", followed by the exact same sequence of characters that was matched by the first group (i.e., the "\1" back-reference).
+
+Here's how it works:
+
+The pattern /(ab)+/ matches one or more occurrences of the characters "ab" and captures them in group 1.
+The "\1" back-reference then references group 1 and matches the exact same sequence of characters that was captured by the first group.
+So, this pattern would match strings like "abab", "ababab", "abababab", and so on, but it would not match strings like "aba" or "abba".
+
+Back-references can be very useful in situations where you need to match patterns that repeat or that have some sort of symmetry. They allow you to create more complex patterns that can match a wider range of strings.
+
 ### Look-ahead and Look-behind
 
 ## Author
