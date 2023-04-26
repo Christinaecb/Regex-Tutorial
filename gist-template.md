@@ -28,7 +28,7 @@ This regex uses the anchors ^ which denotes the start of the string and $ which 
 
 ### Quantifiers
 
-
+The quantifiers +, which means one or more, and {x, y} where x is the min and y is the max are used in this regex. For example, the first + means one or more characters that satisfy the requirements of [a-z0-9_\.-], the later + similarly denotes one or more characters in the group [\da-z\.-], and the {2, 6} indicates two to six characters in the group [a-z\.].
 
 ### OR Operator
 
