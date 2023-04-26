@@ -44,6 +44,8 @@ The regex is enclosed by two / characters with no flags. Since multi-line is not
 
 ### Grouping and Capturing
 
+Parenthases are used to group parts of the expression together. In /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ the username is grouped, then the provider name is grouped, but between them is an @ symbol so nothing affecting those groups affects the @ symbol and the regex will just look for a single @ symbol between those two groups.
+
 ### Bracket Expressions
 
 ### Greedy and Lazy Match
