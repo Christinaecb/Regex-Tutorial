@@ -40,6 +40,8 @@ This regex uses the character class \d which denotes any digit character 0-9. Th
 
 ### Flags
 
+The regex is enclosed by two / characters with no flags. Since multi-line is not enabled (by following the ending / with an m), the anchors match a string instead of the start and end of a line.
+
 ### Grouping and Capturing
 
 ### Bracket Expressions
