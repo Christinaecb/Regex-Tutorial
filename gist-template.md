@@ -52,6 +52,8 @@ Using brackets allows a regex to match specific characters in a range. So, [a-z]
 
 ### Greedy and Lazy Match
 
+A greedy match will match as much as possible while the lazy match will try to match as little as possible. In matches in the email regex are greedy and will match as much as possible.
+
 ### Boundaries
 
 ### Back-references
