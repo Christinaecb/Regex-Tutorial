@@ -52,9 +52,31 @@ Using brackets allows a regex to match specific characters in a range. So, [a-z]
 
 ### Greedy and Lazy Match
 
-A greedy match will match as much as possible while the lazy match will try to match as little as possible. In matches in the email regex are greedy and will match as much as possible.
+In regular expressions (regex), "greedy" and "lazy" matching are two different ways of specifying how a pattern should match text.
+
+A "greedy" match means that the pattern should try to match as much text as possible while still satisfying the overall pattern. This means that the regex engine will match as many characters as it can, even if it could have matched the pattern with fewer characters. In other words, greedy matching matches as much text as possible while still allowing the pattern to be matched.
+
+For example, if you have the string "abc123def" and the pattern /a.d/, a greedy match will match the entire string "abc123def", because the . will match "bc123".
+
+A "lazy" match, on the other hand, means that the pattern should match as little text as possible while still satisfying the overall pattern. This means that the regex engine will match as few characters as it can, even if it could have matched the pattern with more characters. In other words, lazy matching matches as little text as possible while still allowing the pattern to be matched.
+
+For example, if you have the string "abc123def" and the pattern /a.?d/, a lazy match will only match the characters "abc1d", because the .? will match "nothing or the minimum of any character" and satisfy the pattern as soon as it sees the "d".
+
+In summary, the difference between greedy and lazy matching is in how the regex engine tries to match text. Greedy matching matches as much text as possible, while lazy matching matches as little text as possible.
 
 ### Boundaries
+
+In regular expressions (regex), a boundary is a character or a sequence of characters that define the start or end of a word, line, or string. A regex boundary is a way to specify a position between two characters or sets of characters that can be matched by a pattern.
+
+There are several types of regex boundaries that can be used depending on the context and the type of match required:
+
+Word boundary (\b): A word boundary is a zero-width assertion that matches the position between a word character (as defined by the Unicode standard) and a non-word character, or vice versa. It is often used to match whole words within a string.
+
+Line boundary (^ and $): The caret (^) matches the start of a line, while the dollar sign ($) matches the end of a line. These boundaries are often used to match a pattern at the beginning or end of a line.
+
+Lookahead and lookbehind assertions: Lookahead assertions allow you to match a pattern only if it is followed by another pattern, without including the second pattern in the match. Lookbehind assertions allow you to match a pattern only if it is preceded by another pattern, without including the first pattern in the match.
+
+Using regex boundaries in your regular expressions can help you create more specific and accurate patterns that match the exact parts of a string that you need.
 
 ### Back-references
 
