@@ -24,27 +24,27 @@ In this tutorial I will break down the following regex for matching an email /^(
 
 ### Anchors
 
-This regex uses the anchors ^ which denotes the start of the string and $ which denotes the end of the string. Multiline is not enabled so the markers indicate start and end of a string as opposed to a line.
+This regex uses the anchors ```^``` which denotes the start of the string and ```$``` which denotes the end of the string. Multiline is not enabled so the markers indicate start and end of a string as opposed to a line. 
 
 ### Quantifiers
 
-The quantifiers +, which means one or more, and {x, y} where x is the min and y is the max are used in this regex. For example, the first + means one or more characters that satisfy the requirements of [a-z0-9_\.-], the later + similarly denotes one or more characters in the group [\da-z\.-], and the {2, 6} indicates two to six characters in the group [a-z\.].
+The quantifiers ```+```, which means one or more, and ```{x, y}``` where ```x``` is the min and ```y``` is the max are used in this regex. For example, the first ```+``` means one or more characters that satisfy the requirements of ```[a-z0-9_\.-]```, the later ```+``` similarly denotes one or more characters in the group ```[\da-z\.-]```, and the ```{2, 6}``` indicates two to six characters in the group ```[a-z\.]```. 
 
 ### OR Operator
 
-The [] OR operator is used in this regex. For example, [a-z0-9_\.-] means any character a-z (case insensitive), any digit 0-9, _, ., or -. The \ is used to denote a literal . instead of the usual meaning of . which is "any character".
+The ```[]``` OR operator is used in this regex. For example, ```[a-z0-9_\.-]``` means any character ```a-z``` (case insensitive), any digit ```0-9```, ```_```, ```.```, or ```-```. The ```\``` is used to denote a literal ```.``` instead of the usual meaning of ```.``` which is "any character". 
 
 ### Character Classes
 
-This regex uses the character class \d which denotes any digit character 0-9. The \ indicates the character class which is distinct from a plain d meaning literally the letter d.
+This regex uses the character class ```\d``` which denotes any digit character 0-9. The ```\``` indicates the character class which is distinct from a plain ```d``` meaning literally the letter ```d```. 
 
 ### Flags
 
-The regex is enclosed by two / characters with no flags. Since multi-line is not enabled (by following the ending / with an m), the anchors match a string instead of the start and end of a line.
+The regex is enclosed by two ```/``` characters with no flags. Since multi-line is not enabled (by following the ending ```/``` with an ```m```), the anchors match a string instead of the start and end of a line. 
 
 ### Grouping and Capturing
 
-Parenthases are used to group parts of the expression together. In /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/ the username is grouped, then the provider name is grouped, but between them is an @ symbol so nothing affecting those groups affects the @ symbol and the regex will just look for a single @ symbol between those two groups.
+In this regex, ```()``` parentheses are used to capture a group. The first set of ```()``` captures the username of the email address, the second set captures the domain name, and the final set captures the domain. Broken down, ```/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/``` means one or more characters ```a-z``` (case insensitive), ```0-9```, ```_```, ```.```, or ```-```, followed by a literal ```@```, followed by one or more characters of any digit ```0-9```, ```a-z``` (case insensitive), ```.```, or ```-```, followed by a literal ```.```, followed by 2-6 characters ```a-z``` (case insensivite) or ```.```. 
 
 ### Bracket Expressions
 
