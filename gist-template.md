@@ -94,6 +94,20 @@ Back-references can be very useful in situations where you need to match pattern
 
 ### Look-ahead and Look-behind
 
+In regular expressions, look-ahead and look-behind assertions are non-capturing zero-width patterns that match text based on what comes before or after a particular pattern, without including those characters in the match. Look-ahead checks what follows the pattern, while look-behind checks what precedes it. They are useful for creating more complex patterns that match specific text only when it is preceded or followed by certain other text.
+
+There are two types of look-arounds:
+
+Positive Look-ahead: (?=...): Checks if a pattern exists ahead of the current position, without including it in the match result. If the pattern exists, the match continues from the current position. For example, the pattern /\d(?=\w)/ would match any digit that is immediately followed by a word character.
+
+Negative Look-ahead: (?!...): Checks if a pattern does NOT exist ahead of the current position, without including it in the match result. If the pattern does not exist, the match continues from the current position. For example, the pattern /hello (?!world)/ would match "hello there" but not "hello world".
+
+There are also two types of look-behinds, which work in a similar way to look-aheads:
+
+A negative look-ahead assertion is specified using the syntax "(?!pattern)", which matches only if "pattern" does not match the text immediately following the current position.
+
+Positive Look-behind Checks if a pattern exists behind the current position, without including it in the match result. If the pattern exists, the match continues from the current position. For example, the pattern /(?<=\w)\d/ would match any digit that is immediately preceded by a word character.
+
 ## Author
 
 A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
