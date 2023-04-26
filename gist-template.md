@@ -56,11 +56,11 @@ In regular expressions (regex), "greedy" and "lazy" matching are two different w
 
 A "greedy" match means that the pattern should try to match as much text as possible while still satisfying the overall pattern. This means that the regex engine will match as many characters as it can, even if it could have matched the pattern with fewer characters. In other words, greedy matching matches as much text as possible while still allowing the pattern to be matched.
 
-For example, if you have the string "abc123def" and the pattern /a.d/, a greedy match will match the entire string "abc123def", because the . will match "bc123".
+For example, if you have the string `"abc123def"` and the pattern `/a.d/`, a greedy match will match the entire string `"abc123def"`, because the . will match `"bc123"`.
 
 A "lazy" match, on the other hand, means that the pattern should match as little text as possible while still satisfying the overall pattern. This means that the regex engine will match as few characters as it can, even if it could have matched the pattern with more characters. In other words, lazy matching matches as little text as possible while still allowing the pattern to be matched.
 
-For example, if you have the string "abc123def" and the pattern /a.?d/, a lazy match will only match the characters "abc1d", because the .? will match "nothing or the minimum of any character" and satisfy the pattern as soon as it sees the "d".
+For example, if you have the string `"abc123def"` and the pattern `/a.?d/`, a lazy match will only match the characters `"abc1d"`, because the .? will match "nothing or the minimum of any character" and satisfy the pattern as soon as it sees the `"d"`.
 
 In summary, the difference between greedy and lazy matching is in how the regex engine tries to match text. Greedy matching matches as much text as possible, while lazy matching matches as little text as possible.
 
@@ -70,9 +70,9 @@ In regular expressions (regex), a boundary is a character or a sequence of chara
 
 There are several types of regex boundaries that can be used depending on the context and the type of match required:
 
-Word boundary (\b): A word boundary is a zero-width assertion that matches the position between a word character (as defined by the Unicode standard) and a non-word character, or vice versa. It is often used to match whole words within a string.
+Word boundary `(\b)`: A word boundary is a zero-width assertion that matches the position between a word character (as defined by the Unicode standard) and a non-word character, or vice versa. It is often used to match whole words within a string.
 
-Line boundary (^ and $): The caret (^) matches the start of a line, while the dollar sign ($) matches the end of a line. These boundaries are often used to match a pattern at the beginning or end of a line.
+Line boundary `(^ and $)`: The caret `(^)` matches the start of a line, while the dollar sign `($)` matches the end of a line. These boundaries are often used to match a pattern at the beginning or end of a line.
 
 Lookahead and lookbehind assertions: Lookahead assertions allow you to match a pattern only if it is followed by another pattern, without including the second pattern in the match. Lookbehind assertions allow you to match a pattern only if it is preceded by another pattern, without including the first pattern in the match.
 
@@ -82,13 +82,13 @@ Using regex boundaries in your regular expressions can help you create more spec
 
 In regular expressions, a back-reference is a way to reference a previously captured group in the same regex. It is created by capturing a group of characters using parentheses, and then referencing that group later in the regex using a special syntax. Back-references are useful for matching repeating patterns or patterns with symmetry.
 
-For example, consider the following regex pattern: /(ab)+\1/. This pattern matches a string that contains one or more occurrences of the characters "ab", followed by the exact same sequence of characters that was matched by the first group (i.e., the "\1" back-reference).
+For example, consider the following regex pattern: `/(ab)+\1/`. This pattern matches a string that contains one or more occurrences of the characters "ab", followed by the exact same sequence of characters that was matched by the first group (i.e., the "\1" back-reference).
 
 Here's how it works:
 
-The pattern /(ab)+/ matches one or more occurrences of the characters "ab" and captures them in group 1.
+The pattern `/(ab)+/` matches one or more occurrences of the characters "ab" and captures them in group 1.
 The "\1" back-reference then references group 1 and matches the exact same sequence of characters that was captured by the first group.
-So, this pattern would match strings like "abab", "ababab", "abababab", and so on, but it would not match strings like "aba" or "abba".
+So, this pattern would match strings like `"abab"`, `"ababab"`, `"abababab"`, and so on, but it would not match strings like `"aba"` or `"abba"`.
 
 Back-references can be very useful in situations where you need to match patterns that repeat or that have some sort of symmetry. They allow you to create more complex patterns that can match a wider range of strings.
 
