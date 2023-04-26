@@ -48,7 +48,7 @@ In this regex, ```()``` parentheses are used to capture a group. The first set o
 
 ### Bracket Expressions
 
-Using brackets allows a regex to match specific characters in a range. So, [a-z] is not looking for a or - or z, but actually looking for any letters a through z. And in the brackets the "-" is not taken literally in the cases of a-z or 0-9. But after the \ to escape the period it is recognized as a literal "-".
+Using brackets allows a regex to match specific characters in a range. So, `[a-z]` is not looking for a or - or z, but actually looking for any letters a through z. And in the brackets the "-" is not taken literally in the cases of a-z or 0-9. But after the \ to escape the period it is recognized as a literal "-".
 
 ### Greedy and Lazy Match
 
