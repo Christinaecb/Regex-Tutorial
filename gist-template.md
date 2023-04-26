@@ -32,6 +32,8 @@ The quantifiers +, which means one or more, and {x, y} where x is the min and y 
 
 ### OR Operator
 
+The [] OR operator is used in this regex. For example, [a-z0-9_\.-] means any character a-z (case insensitive), any digit 0-9, _, ., or -. The \ is used to denote a literal . instead of the usual meaning of . which is "any character".
+
 ### Character Classes
 
 ### Flags
