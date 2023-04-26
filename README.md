@@ -33,3 +33,11 @@ https://gist.github.com/Christinaecb/e8f6a8b2d4228cf5e48b4844b644cb31
 
 This project is licensed under the MIT license. Click [here](https://opensource.org/licenses/MIT) for more information.<br>
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+## Questions
+
+[GitHub Profile](https://github.com/Christinaecb)
+
+Email -- christina.e.c.barberi@gmail.com
+
+I welcome feedback and suggestions for this project. If you have ideas for how to improve the project, please feel free to contact me directly. Your input is greatly appreciated!
