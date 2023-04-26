@@ -104,10 +104,14 @@ Negative Look-ahead: (?!...): Checks if a pattern does NOT exist ahead of the cu
 
 There are also two types of look-behinds, which work in a similar way to look-aheads:
 
-A negative look-ahead assertion is specified using the syntax "(?!pattern)", which matches only if "pattern" does not match the text immediately following the current position.
+A negative look-behind assertion is specified using the syntax "(?<!pattern)", which matches only if "pattern" does not match the text immediately preceding the current position.
 
 Positive Look-behind Checks if a pattern exists behind the current position, without including it in the match result. If the pattern exists, the match continues from the current position. For example, the pattern /(?<=\w)\d/ would match any digit that is immediately preceded by a word character.
 
 ## Author
 
-A short section about the author with a link to the author's GitHub profile (replace with your information and a link to your profile)
+[GitHub Profile](https://github.com/Christinaecb)
+
+Email -- christina.e.c.barberi@gmail.com
+
+I welcome feedback and suggestions for this project. If you have ideas for how to improve the project, please feel free to contact me directly. Your input is greatly appreciated!
