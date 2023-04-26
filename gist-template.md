@@ -24,7 +24,11 @@ In this tutorial I will break down the following regex for matching an email /^(
 
 ### Anchors
 
+This regex uses the anchors ^ which denotes the start of the string and $ which denotes the end of the string. Multiline is not enabled so the markers indicate start and end of a string as opposed to a line.
+
 ### Quantifiers
+
+
 
 ### OR Operator
 
